@@ -1,0 +1,5 @@
+.build/
+*.swp
+/local/
+/WebService-Fake-*.tar.gz
+/WebService-Fake-*/
