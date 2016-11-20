@@ -30,6 +30,7 @@ sub load_config {
 
       $config->{defaults}{template_start} //= '[%';
       $config->{defaults}{template_stop}  //= '%]';
+      $config->{defaults}{code}           //= 200;
       $config->{v} //= {};
    } ## end try
    catch {
@@ -68,6 +69,7 @@ sub startup {
 
 sub callback {
    my ($self, $spec, $config) = @_;
+   my $defaults = $config->{defaults};
 
    my $body_expander = $self->body_expander($spec, $config);
    my $headers_expander = $self->headers_expander($spec, $config);
@@ -112,7 +114,7 @@ sub callback {
       $rhs->header($_, @{$headers->{$_}}) for keys %$headers;
       $response->fix_headers();
 
-      $c->rendered($spec->{code} // 200);
+      $c->rendered($spec->{code} // $defaults->{code});
    };
 
 } ## end sub callback
