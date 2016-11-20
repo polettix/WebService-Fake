@@ -55,7 +55,7 @@ sub startup {
 
    my $r = $self->routes;
    for my $spec (@{$config->{routes}}) {
-      my $route = $r->route($spec->{uri});
+      my $route = $r->route($spec->{path});
       my @methods =
           exists($spec->{methods}) ? @{$spec->{methods}}
         : exists($spec->{method})  ? $spec->{method}

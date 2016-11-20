@@ -22,14 +22,14 @@ routes:
 
   # this route gets the same behaviour for GETs and POSTs.
   # Default body_wrapper applies here because there's no overriding
-  - uri: '/'
+  - path: '/'
     methods: [ GET, post ]
     headers:
       - Server: 'My::Server'
     body: '{"message":"ciao [% query_params.name %]"}'
 
   # this route gets a custom wrapping and a single method
-  - uri: '/simple'
+  - path: '/simple'
     method: get
     headers:
       - Content-Type: text/plain
@@ -37,7 +37,7 @@ routes:
     body_wrapper: "I say: [% content %]\n"
 
   # this route does not get and wrapping at all
-  - uri: '/nowrap'
+  - path: '/nowrap'
     method: get
     headers:
       - Content-Type: text/plain
@@ -45,13 +45,13 @@ routes:
     body_wrapper: ~
 
   # this leverages upon YAML to get stuff around in this file
-  - uri: '/somestuff'
+  - path: '/somestuff'
     body: *somestuff
     headers:
       - Content-Type: text/plain
 
   # this modifies a variable that can be reused in following requests
-  - uri: '/add'
+  - path: '/add'
     method: post
     body: |
       [%= push @{V "v.some_array"}, time(); "ok" %]
@@ -59,19 +59,19 @@ routes:
 
   # this prints out the list in v.some_array (see above). It can be
   # used to check that /add actually works
-  - uri: '/visit-config'
+  - path: '/visit-config'
     body: >
       [[%= join ", ", map { qq{"$_"} } A "v.some_array" %]]
 
   # these two team up. The first one prepares the answer that the second
   # will give out
-  - uri: '/prepare/:id'
+  - path: '/prepare/:id'
     method: post
     body: '[% V("v")->{x} = (A("v.some_array"))[V "stash.id"]; %]'
     code: 204
     body_wrapper: ~
 
-  - uri: '/whatnow'
+  - path: '/whatnow'
     method: get
     body: '[% v.x %]'
     body_wrapper: ~
