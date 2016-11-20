@@ -60,13 +60,13 @@ sub startup {
         : exists($spec->{method})  ? $spec->{method}
         :                            ();
       $route->via(map { uc($_) } @methods) if @methods;
-      $route->to(cb => $self->cb($spec, $config));
+      $route->to(cb => $self->callback($spec, $config));
    } ## end for my $spec (@{$config...})
 
    return $self;
 } ## end sub startup
 
-sub cb {
+sub callback {
    my ($self, $spec, $config) = @_;
 
    my $body_expander = $self->body_expander($spec, $config);
@@ -115,7 +115,7 @@ sub cb {
       $c->rendered($spec->{code} // 200);
    };
 
-} ## end sub cb
+} ## end sub callback
 
 sub headers_expander {
    my ($self, $spec, $config) = @_;
