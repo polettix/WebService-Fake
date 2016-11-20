@@ -47,12 +47,13 @@ routes:
   # this leverages upon YAML to get stuff around in this file
   - path: '/somestuff'
     body: *somestuff
-    headers:
-      - Content-Type: text/plain
 
   # this modifies a variable that can be reused in following requests
   - path: '/add'
     method: post
+    code: 201
+    headers:
+      - Content-Type: text/plain
     body: |
       [%= push @{V "v.some_array"}, time(); "ok" %]
     body_wrapper: ~
