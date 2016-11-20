@@ -53,6 +53,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/polettix/WebService-Fake/issues"
+      },
+      "homepage" : "https://github.com/polettix/WebService-Fake",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/polettix/WebService-Fake.git",
+         "web" : "https://github.com/polettix/WebService-Fake"
+      }
+   },
    "version" : "0.001",
    "x_contributors" : [
       "Flavio Poletti <flavio@polettix.it>"
