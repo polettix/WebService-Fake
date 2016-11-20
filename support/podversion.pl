@@ -9,6 +9,7 @@ my @parts = split /-/, $dname;
 $parts[-1] .= '.pod';
 my $podfile = path($distro)->child('lib', @parts);
 my $readme = path($distro)->child('README');
+my $script = path($distro)->child('script', 'wsf');
 
 my $tp = Template::Perlish->new(
    start     => '{{[',
@@ -19,7 +20,7 @@ my $tp = Template::Perlish->new(
    },
 );
 
-for my $file ($podfile, $readme) {
+for my $file ($podfile, $readme, $script) {
    my $rendered = $tp->process($file->slurp_raw());
    $file->spew_raw($rendered);
 }
