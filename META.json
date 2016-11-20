@@ -32,19 +32,22 @@
       "develop" : {
          "requires" : {
             "Dist::Milla" : "v1.0.15",
-            "Path::Tiny" : "0.096",
-            "Template::Perlish" : "1.52",
             "Test::Pod" : "1.41"
          }
       },
       "runtime" : {
          "requires" : {
+            "Log::Any" : "1.045",
+            "Mojolicious" : "7.10",
+            "Path::Tiny" : "0.096",
+            "Template::Perlish" : "1.52",
+            "Try::Tiny" : "0.27",
+            "YAML::XS" : "0.63",
             "perl" : "5.010"
          }
       },
       "test" : {
          "requires" : {
-            "Path::Tiny" : "0.096",
             "Test::More" : "0.88"
          }
       }
