@@ -1,7 +1,7 @@
 package WebService::Fake;
 
 use strict;
-{ our $VERSION = '0.001'; }
+{ our $VERSION = '0.002'; }
 
 use Mojo::Base 'Mojolicious';
 use Log::Any qw< $log >;
