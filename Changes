@@ -1,5 +1,7 @@
 {{$NEXT}}
    - example configurations
+   - enable Sparrow in Travis-CI (thanks Alexey Melezhik)
+     (see https://github.com/polettix/WebService-Fake/pull/2/files)
 
 0.002  2016-11-26 14:06:03 CET
    - badges in documentation
