@@ -22,7 +22,7 @@ install:
 before_script:
   - coverage-setup
 script:
-  - prove -l -j$(test-jobs) $(test-files)   # parallel testing
+  - prove -l -j$(test-jobs) $(test-files) # parallel testing
   - sparrow plg run web-service-fake-smoke
 after_success:
   - coverage-report
