@@ -13,3 +13,11 @@ before_install:
   - source ~/travis-perl-helpers/init
   - build-perl
   - perl -V
+  - cpanm --quiet --installdeps --notest .
+  - perl Build.PL && ./Build && ./Build install
+  - cpanm --quiet --notest Sparrow
+  - sparrow plg install web-service-fake-smoke
+
+script:
+  - ./Build test
+  - sparrow plg run web-service-fake-smoke
