@@ -14,7 +14,7 @@ before_install:
   - build-perl
   - perl -V
   - cpanm --quiet --installdeps --notest .
-  - perl Build.PL && ./Build
+  - perl Build.PL && ./Build && ./Build install
   - cpanm --quiet --notest Sparrow
   - sparrow plg install web-service-fake-smoke
 
