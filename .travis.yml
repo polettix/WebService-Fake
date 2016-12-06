@@ -13,3 +13,16 @@ before_install:
   - source ~/travis-perl-helpers/init
   - build-perl
   - perl -V
+  - build-dist
+  - cd $BUILD_DIR             # $BUILD_DIR is set by the build-dist command
+install:
+  - cpan-install --deps       # installs prereqs, including recommends
+  - cpan-install --coverage   # installs converage prereqs, if enabled
+  - sparrow plg install web-service-fake-smoke
+before_script:
+  - coverage-setup
+script:
+  - prove -l -j$(test-jobs) $(test-files)   # parallel testing
+  - sparrow plg run web-service-fake-smoke
+after_success:
+  - coverage-report
