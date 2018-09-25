@@ -2,6 +2,9 @@
    - example configurations
    - enable Sparrow in Travis-CI (thanks Alexey Melezhik)
      (see https://github.com/polettix/WebService-Fake/pull/2/files)
+   - fix test, using Mojo::JSON::true instead of \1 as value for "true"
+   - make cpanfile.snapshot more complete
+   - hopefully better badges in documentation in GitHub
 
 0.002  2016-11-26 14:06:03 CET
    - badges in documentation

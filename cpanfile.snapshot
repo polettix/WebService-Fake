@@ -1,5 +1,15 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  Devel-Symdump-2.18
+    pathname: A/AN/ANDK/Devel-Symdump-2.18.tar.gz
+    provides:
+      Devel::Symdump 2.18
+      Devel::Symdump::Export undef
+    requirements:
+      Compress::Zlib 0
+      ExtUtils::MakeMaker 0
+      Test::More 0
+      perl 5.004
   ExtUtils-Config-0.008
     pathname: L/LE/LEONT/ExtUtils-Config-0.008.tar.gz
     provides:
@@ -27,10 +37,10 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
-  ExtUtils-InstallPaths-0.011
-    pathname: L/LE/LEONT/ExtUtils-InstallPaths-0.011.tar.gz
+  ExtUtils-InstallPaths-0.012
+    pathname: L/LE/LEONT/ExtUtils-InstallPaths-0.012.tar.gz
     provides:
-      ExtUtils::InstallPaths 0.011
+      ExtUtils::InstallPaths 0.012
     requirements:
       Carp 0
       ExtUtils::Config 0.002
@@ -39,31 +49,24 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
-  IO-Socket-IP-0.38
-    pathname: P/PE/PEVANS/IO-Socket-IP-0.38.tar.gz
+  Log-Any-1.707
+    pathname: P/PR/PREACTION/Log-Any-1.707.tar.gz
     provides:
-      IO::Socket::IP 0.38
-    requirements:
-      IO::Socket 0
-      Socket 1.97
-      Test::More 0.88
-  Log-Any-1.045
-    pathname: P/PR/PREACTION/Log-Any-1.045.tar.gz
-    provides:
-      Log::Any 1.045
-      Log::Any::Adapter 1.045
-      Log::Any::Adapter::Base 1.045
-      Log::Any::Adapter::File 1.045
-      Log::Any::Adapter::Null 1.045
-      Log::Any::Adapter::Stderr 1.045
-      Log::Any::Adapter::Stdout 1.045
-      Log::Any::Adapter::Test 1.045
-      Log::Any::Adapter::Util 1.045
-      Log::Any::Manager 1.045
-      Log::Any::Proxy 1.045
-      Log::Any::Proxy::Null 1.045
-      Log::Any::Proxy::Test 1.045
-      Log::Any::Test 1.045
+      Log::Any 1.707
+      Log::Any::Adapter 1.707
+      Log::Any::Adapter::Base 1.707
+      Log::Any::Adapter::File 1.707
+      Log::Any::Adapter::Null 1.707
+      Log::Any::Adapter::Stderr 1.707
+      Log::Any::Adapter::Stdout 1.707
+      Log::Any::Adapter::Syslog 1.707
+      Log::Any::Adapter::Test 1.707
+      Log::Any::Adapter::Util 1.707
+      Log::Any::Manager 1.707
+      Log::Any::Proxy 1.707
+      Log::Any::Proxy::Null 1.707
+      Log::Any::Proxy::Test 1.707
+      Log::Any::Test 1.707
     requirements:
       B 0
       Carp 0
@@ -71,7 +74,11 @@ DISTRIBUTIONS
       Exporter 0
       ExtUtils::MakeMaker 0
       Fcntl 0
+      File::Basename 0
+      FindBin 0
       IO::File 0
+      Storable 0
+      Sys::Syslog 0
       Test::Builder 0
       constant 0
       strict 0
@@ -101,8 +108,8 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
-  Mojolicious-7.10
-    pathname: S/SR/SRI/Mojolicious-7.10.tar.gz
+  Mojolicious-8.0
+    pathname: S/SR/SRI/Mojolicious-8.0.tar.gz
     provides:
       Mojo undef
       Mojo::Asset undef
@@ -124,6 +131,7 @@ DISTRIBUTIONS
       Mojo::Date undef
       Mojo::EventEmitter undef
       Mojo::Exception undef
+      Mojo::File undef
       Mojo::Headers undef
       Mojo::HelloWorld undef
       Mojo::Home undef
@@ -133,6 +141,7 @@ DISTRIBUTIONS
       Mojo::IOLoop::Server undef
       Mojo::IOLoop::Stream undef
       Mojo::IOLoop::Subprocess undef
+      Mojo::IOLoop::TLS undef
       Mojo::JSON undef
       Mojo::JSON::Pointer undef
       Mojo::Loader undef
@@ -142,6 +151,7 @@ DISTRIBUTIONS
       Mojo::Message::Response undef
       Mojo::Parameters undef
       Mojo::Path undef
+      Mojo::Promise undef
       Mojo::Reactor undef
       Mojo::Reactor::EV undef
       Mojo::Reactor::Poll undef
@@ -150,6 +160,8 @@ DISTRIBUTIONS
       Mojo::Server::Daemon undef
       Mojo::Server::Hypnotoad undef
       Mojo::Server::Morbo undef
+      Mojo::Server::Morbo::Backend undef
+      Mojo::Server::Morbo::Backend::Poll undef
       Mojo::Server::PSGI undef
       Mojo::Server::PSGI::_IO undef
       Mojo::Server::Prefork undef
@@ -166,30 +178,28 @@ DISTRIBUTIONS
       Mojo::UserAgent::Transactor undef
       Mojo::Util undef
       Mojo::WebSocket undef
-      Mojolicious 7.10
+      Mojolicious 8.0
       Mojolicious::Command undef
+      Mojolicious::Command::Author::cpanify undef
+      Mojolicious::Command::Author::generate undef
+      Mojolicious::Command::Author::generate::app undef
+      Mojolicious::Command::Author::generate::lite_app undef
+      Mojolicious::Command::Author::generate::makefile undef
+      Mojolicious::Command::Author::generate::plugin undef
+      Mojolicious::Command::Author::inflate undef
       Mojolicious::Command::cgi undef
-      Mojolicious::Command::cpanify undef
       Mojolicious::Command::daemon undef
       Mojolicious::Command::eval undef
-      Mojolicious::Command::generate undef
-      Mojolicious::Command::generate::app undef
-      Mojolicious::Command::generate::lite_app undef
-      Mojolicious::Command::generate::makefile undef
-      Mojolicious::Command::generate::plugin undef
       Mojolicious::Command::get undef
-      Mojolicious::Command::inflate undef
       Mojolicious::Command::prefork undef
       Mojolicious::Command::psgi undef
       Mojolicious::Command::routes undef
-      Mojolicious::Command::test undef
       Mojolicious::Command::version undef
       Mojolicious::Commands undef
       Mojolicious::Controller undef
       Mojolicious::Lite undef
       Mojolicious::Plugin undef
       Mojolicious::Plugin::Config undef
-      Mojolicious::Plugin::Config::Sandbox undef
       Mojolicious::Plugin::DefaultHelpers undef
       Mojolicious::Plugin::EPLRenderer undef
       Mojolicious::Plugin::EPRenderer undef
@@ -217,16 +227,18 @@ DISTRIBUTIONS
       JSON::PP 2.27103
       Pod::Simple 3.09
       Time::Local 1.2
-  Path-Tiny-0.098
-    pathname: D/DA/DAGOLDEN/Path-Tiny-0.098.tar.gz
+      perl 5.010001
+  Path-Tiny-0.108
+    pathname: D/DA/DAGOLDEN/Path-Tiny-0.108.tar.gz
     provides:
-      Path::Tiny 0.098
-      Path::Tiny::Error 0.098
+      Path::Tiny 0.108
+      Path::Tiny::Error 0.108
     requirements:
       Carp 0
       Cwd 0
       Digest 1.03
       Digest::SHA 5.45
+      Encode 0
       Exporter 5.57
       ExtUtils::MakeMaker 6.17
       Fcntl 0
@@ -237,76 +249,58 @@ DISTRIBUTIONS
       File::Temp 0.19
       File::stat 0
       constant 0
-      if 0
       overload 0
       perl 5.008001
       strict 0
       warnings 0
-  Template-Perlish-1.52
-    pathname: P/PO/POLETTIX/Template-Perlish-1.52.tar.gz
+      warnings::register 0
+  Pod-Coverage-0.23
+    pathname: R/RC/RCLAMP/Pod-Coverage-0.23.tar.gz
     provides:
-      Template::Perlish 1.52
+      Pod::Coverage 0.23
+      Pod::Coverage::CountParents undef
+      Pod::Coverage::ExportOnly undef
+      Pod::Coverage::Extractor 0.23
+      Pod::Coverage::Overloader undef
+    requirements:
+      Devel::Symdump 2.01
+      ExtUtils::MakeMaker 0
+      Pod::Find 0.21
+      Pod::Parser 1.13
+      Test::More 0
+  Template-Perlish-1.54
+    pathname: P/PO/POLETTIX/Template-Perlish-1.54.tar.gz
+    provides:
+      Template::Perlish 1.54
     requirements:
       Module::Build::Tiny 0.034
       perl 5.008000
-  Test-Harness-3.36
-    pathname: L/LE/LEONT/Test-Harness-3.36.tar.gz
+  Test-Pod-1.52
+    pathname: E/ET/ETHER/Test-Pod-1.52.tar.gz
     provides:
-      App::Prove 3.36
-      App::Prove::State 3.36
-      App::Prove::State::Result 3.36
-      App::Prove::State::Result::Test 3.36
-      Harness::Hook undef
-      TAP::Base 3.36
-      TAP::Formatter::Base 3.36
-      TAP::Formatter::Color 3.36
-      TAP::Formatter::Console 3.36
-      TAP::Formatter::Console::ParallelSession 3.36
-      TAP::Formatter::Console::Session 3.36
-      TAP::Formatter::File 3.36
-      TAP::Formatter::File::Session 3.36
-      TAP::Formatter::Session 3.36
-      TAP::Harness 3.36
-      TAP::Harness::Env 3.36
-      TAP::Object 3.36
-      TAP::Parser 3.36
-      TAP::Parser::Aggregator 3.36
-      TAP::Parser::Grammar 3.36
-      TAP::Parser::Iterator 3.36
-      TAP::Parser::Iterator::Array 3.36
-      TAP::Parser::Iterator::Process 3.36
-      TAP::Parser::Iterator::Stream 3.36
-      TAP::Parser::IteratorFactory 3.36
-      TAP::Parser::Multiplexer 3.36
-      TAP::Parser::Result 3.36
-      TAP::Parser::Result::Bailout 3.36
-      TAP::Parser::Result::Comment 3.36
-      TAP::Parser::Result::Plan 3.36
-      TAP::Parser::Result::Pragma 3.36
-      TAP::Parser::Result::Test 3.36
-      TAP::Parser::Result::Unknown 3.36
-      TAP::Parser::Result::Version 3.36
-      TAP::Parser::Result::YAML 3.36
-      TAP::Parser::ResultFactory 3.36
-      TAP::Parser::Scheduler 3.36
-      TAP::Parser::Scheduler::Job 3.36
-      TAP::Parser::Scheduler::Spinner 3.36
-      TAP::Parser::Source 3.36
-      TAP::Parser::SourceHandler 3.36
-      TAP::Parser::SourceHandler::Executable 3.36
-      TAP::Parser::SourceHandler::File 3.36
-      TAP::Parser::SourceHandler::Handle 3.36
-      TAP::Parser::SourceHandler::Perl 3.36
-      TAP::Parser::SourceHandler::RawTAP 3.36
-      TAP::Parser::YAMLish::Reader 3.36
-      TAP::Parser::YAMLish::Writer 3.36
-      Test::Harness 3.36
+      Test::Pod 1.52
     requirements:
       ExtUtils::MakeMaker 0
-  Try-Tiny-0.27
-    pathname: E/ET/ETHER/Try-Tiny-0.27.tar.gz
+      File::Find 0
+      Pod::Simple 3.05
+      Test::Builder::Tester 1.02
+      Test::More 0.62
+      perl 5.008
+  Test-Pod-Coverage-1.10
+    pathname: N/NE/NEILB/Test-Pod-Coverage-1.10.tar.gz
     provides:
-      Try::Tiny 0.27
+      Test::Pod::Coverage 1.10
+    requirements:
+      ExtUtils::MakeMaker 0
+      Pod::Coverage 0
+      Test::Builder 0
+      perl 5.006
+      strict 0
+      warnings 0
+  Try-Tiny-0.30
+    pathname: E/ET/ETHER/Try-Tiny-0.30.tar.gz
+    provides:
+      Try::Tiny 0.30
     requirements:
       Carp 0
       Exporter 5.57
@@ -315,11 +309,11 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
-  YAML-LibYAML-0.63
-    pathname: T/TI/TINITA/YAML-LibYAML-0.63.tar.gz
+  YAML-LibYAML-0.74
+    pathname: I/IN/INGY/YAML-LibYAML-0.74.tar.gz
     provides:
-      YAML::LibYAML 0.63
-      YAML::XS 0.63
+      YAML::LibYAML 0.74
+      YAML::XS 0.74
       YAML::XS::LibYAML undef
     requirements:
       ExtUtils::MakeMaker 0
