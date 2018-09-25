@@ -20,4 +20,5 @@ install:
   - sparrow plg install web-service-fake-smoke
 script:
   - ./Build test
+  - sparrow index update
   - sparrow plg run web-service-fake-smoke
