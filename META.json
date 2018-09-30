@@ -53,7 +53,7 @@
          }
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "web" : "https://github.com/polettix/WebService-Fake/issues"
@@ -65,7 +65,7 @@
          "web" : "https://github.com/polettix/WebService-Fake"
       }
    },
-   "version" : "0.003",
+   "version" : "0.004",
    "x_contributors" : [
       "Alexey Melezhik <melezhik@gmail.com>",
       "Flavio Poletti <flavio@polettix.it>"

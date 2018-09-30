@@ -1,5 +1,8 @@
 {{$NEXT}}
 
+0.004  2018-09-30 18:38:59 CEST
+   - release after 235 PASSes in CPAN Testers (Thanks!)
+
 0.003  2018-09-25 21:31:27 CEST
    - example configurations
    - enable Sparrow in Travis-CI (thanks Alexey Melezhik)
