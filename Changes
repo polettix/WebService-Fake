@@ -1,4 +1,5 @@
 {{$NEXT}}
+   - increase minimum version of perl for keeping up with Mojolicious
 
 0.005  2021-03-07 15:33:02 CET
    - adapt to Mojolicious 9.x
