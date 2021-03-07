@@ -55,12 +55,12 @@ sub startup {
 
    my $r = $self->routes;
    for my $spec (@{$config->{routes}}) {
-      my $route = $r->route($spec->{path});
+      my $route = $r->any($spec->{path});
       my @methods =
           exists($spec->{methods}) ? @{$spec->{methods}}
         : exists($spec->{method})  ? $spec->{method}
         :                            ();
-      $route->via(map { uc($_) } @methods) if @methods;
+      $route->methods(map { uc($_) } @methods) if @methods;
       $route->to(cb => $self->callback($spec, $config));
    } ## end for my $spec (@{$config...})
 
