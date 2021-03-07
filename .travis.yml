@@ -16,9 +16,8 @@ before_install:
 install:
   - cpanm --installdeps --notest -q .
   - "perl Build.PL && ./Build && ./Build install"
-  - cpanm --notest -q Sparrow
-  - sparrow index update
-  - sparrow plg install web-service-fake-smoke
+#  - cpanm --notest -q Sparrow
+#  - sparrow plg install web-service-fake-smoke
 script:
   - ./Build test
-  - sparrow plg run web-service-fake-smoke
+#  - sparrow plg run web-service-fake-smoke
